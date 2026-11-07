@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Buitrago | Desarrollador & QA</title>
+    
+    <!-- Fuentes: Playfair Display (Serif) y Lato (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ================= BARRA DE NAVEGACIÓN ================= -->
+    <nav class="navbar" id="navbar">
+        
+        <!-- Izquierda: Logo y Nombre -->
+        <div class="nav-logo">
+            <div class="circulo-dorado">TB</div>
+            <a href="#sobre-mi" class="nombre-nav">Thomas Buitrago</a>
+        </div>
+        
+        <!-- Centro: Píldora de estado -->
+        <div class="nav-estado">
+            <div class="pill-disponible">
+                <span class="punto-verde"></span> Disponible para Proyectos & QA
+            </div>
+        </div>
+
+        <!-- Derecha: Enlaces -->
+        <div class="nav-enlaces">
+            <a href="#sobre-mi" class="nav-link activo">SOBRE MÍ</a>
+            <a href="#experiencia" class="nav-link">EXPERIENCIA</a>
+            <a href="#estudios" class="nav-link">ESTUDIOS</a>
+            <a href="#contacto" class="nav-link">CONTACTO</a>
+        </div>
+        
+    </nav>
+
+    <!-- Contenedor centralizado para todo el contenido -->
+    <div class="contenedor-principal">
+        
+        <!-- Sección Hero / Sobre Mí -->
+        <section id="sobre-mi" class="hero-section">
+            
+            <!-- Columna Izquierda: Texto y Botones -->
+            <div class="hero-texto">
+                <div class="etiqueta-seccion">
+                    <span class="linea"></span> PORTAFOLIO PROFESIONAL
+                </div>
+                
+                <h1>Thomas Buitrago</h1>
+                <h2 class="subtitulo">Desarrollador & QA</h2>
+                
+                <p class="descripcion-perfil">
+                    Estudiante de Ingeniería de Software con experiencia en pruebas manuales de control de calidad (QA), pruebas de backend y soporte técnico. Familiarizado con metodologías ágiles y el uso de herramientas de IA para optimizar la documentación y los procesos de prueba. Orientado al detalle y con gran motivación para contribuir al ciclo de vida del desarrollo de software.
+                </p>
+                
+                <div class="caja-destacados">
+                    <div class="destacado">
+                        <h3>Desarrollo full stack</h3>
+                        <p>Desarrollo de aplicaciones web ágiles e interfaces responsivas, utilizando Angular y JavaScript para conectar diseño funcional con código eficiente.</p>
+                    </div>
+                    <div class="destacado destacado-derecha">
+                        <h3>Calidad & Precisión</h3>
+                        <p>Metodología QA manual enfocada en el reporte detallado de errores, mitigación de riesgos y el aseguramiento de una excelente experiencia de usuario.</p>
+                    </div>
+                </div>
+                
+                <div class="botones-accion">
+                    <a href="#experiencia" class="btn btn-primario">VER EXPERIENCIA</a>
+                    <a href="#contacto" class="btn btn-secundario">INICIAR CONTACTO</a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Ilustración del Portafolio Físico -->
+            <div class="hero-imagen">
+                <div class="portafolio-mockup">
+                    <div class="portafolio-marco-exterior">
+                        <div class="portafolio-marco-interior">
+                            <div class="portafolio-contenido">
+                                <h2 class="monograma">TB</h2>
+                                <p class="craftsman">Software Craftsman</p>
+                                <p class="rol-detalle">FULL-STACK & QUALITY ASSURANCE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+     <!-- ================= SECCIÓN: EXPERIENCIA Y PROYECTOS ================= -->
+        <section id="experiencia" class="seccion-experiencia">
+            
+            <div class="cabecera-experiencia">
+                <h4 class="etiqueta-dorada">TRAYECTORIA Y PROYECTOS</h4>
+                <h2>Experiencia Seleccionada</h2>
+                <p>Explora proyectos destacados y roles profesionales estructurados bajo estándares consistentes de calidad, arquitectura y entrega.</p>
+            </div>
+
+            <!-- Barra de Filtros -->
+            <div class="barra-filtros">
+                <button class="btn-filtro activo" data-filtro="todos">
+                    VER TODOS <span class="contador">5</span>
+                </button>
+                <button class="btn-filtro" data-filtro="fullstack">
+                    FULL-STACK <span class="contador">2</span>
+                </button>
+                <button class="btn-filtro" data-filtro="qa">
+                    QA <span class="contador">1</span>
+                </button>
+                <button class="btn-filtro" data-filtro="soporte">
+                    SOPORTE BILINGÜE & IT <span class="contador">2</span>
+                </button>
+            </div>
+
+            <!-- Cuadrícula de Tarjetas -->
+            <div class="grid-experiencia">
+
+                <!-- Tarjeta 1: QA ADLAB -->
+                <article class="tarjeta-exp" data-categoria="qa">
+                    <div class="tarjeta-header">
+                        <span class="tag-categoria">ASEGURAMIENTO DE CALIDAD</span>
+                        <span class="anio">2026</span>
+                    </div>
+                    <h3>ADLAB</h3>
+                    <p class="rol">ANALISTA DE QA MANUAL & CALIDAD</p>
+                    <p class="descripcion">Diseño y ejecución de matrices de pruebas funcionales, de regresión y de integración. Detección temprana y documentación metódica de no conformidades para garantizar lanzamientos de alta confiabilidad.</p>
+                    <div class="tags-tecnicos">
+                        <span>Test Cases</span> <span>Jira</span> <span>Postman</span> <span>QA Funcional</span>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <span class="tipo-rol">Rol Profesional</span>
+                        <a href="#" class="link-detalles">DETALLES &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2: Full-Stack FutEnglish -->
+                <article class="tarjeta-exp" data-categoria="fullstack">
+                    <div class="tarjeta-header">
+                        <span class="tag-categoria">FULL-STACK DEVELOPMENT</span>
+                        <span class="anio">2026</span>
+                    </div>
+                    <h3>FutEnglish</h3>
+                    <p class="rol">APP DE APRENDIZAJE DE INGLÉS Y FÚTBOL</p>
+                    <p class="descripcion">Aplicación interactiva y gamificada que enseña vocabulario y estructuras en inglés mediante narrativa y tácticas de fútbol. Arquitectura modular orientada al rendimiento y feedback visual inmediato.</p>
+                    <div class="tags-tecnicos">
+                        <span>HTML5</span> <span>Angular 17</span> <span>JavaScript ES6</span> <span>Responsive UI</span>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <span class="tipo-rol">Proyecto Personal</span>
+                        <a href="#" class="link-detalles">VER CÓDIGO &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3: Full-Stack Calculadora -->
+                <article class="tarjeta-exp" data-categoria="fullstack">
+                    <div class="tarjeta-header">
+                        <span class="tag-categoria">FULL-STACK & ALGORITMOS</span>
+                        <span class="anio">2026</span>
+                    </div>
+                    <h3>Calculadora Hidrostática</h3>
+                    <p class="rol">MOTOR COMPUTACIONAL DE FUERZA Y PRESIÓN</p>
+                    <p class="descripcion">Servicio computacional que procesa integrales de presión de fluidos sobre superficies compuestas, entregando centro de presión y fuerza resultante con validación matemática estricta.</p>
+                    <div class="tags-tecnicos">
+                        <span>HTML5</span> <span>Vanilla JS</span> <span>Algoritmia</span> <span>Cálculo Numérico</span>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <span class="tipo-rol">Solución Técnica</span>
+                        <a href="#" class="link-detalles">VER CÓDIGO &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4: IBM / Algar Tech -->
+                <article class="tarjeta-exp" data-categoria="soporte">
+                    <div class="tarjeta-header">
+                        <span class="tag-categoria">SOPORTE TÉCNICO EMPRESARIAL</span>
+                        <span class="anio">2024-2025</span>
+                    </div>
+                    <h3>IBM / Algar Tech</h3>
+                    <p class="rol">TECNÓLOGO EN MESA DE AYUDA (L1.5)</p>
+                    <p class="descripcion">Soporte técnico remoto especializado de Nivel 1.5 en entornos corporativos (VPN, Citrix). Elaboración estructurada de reportes de diagnóstico y aplicación de lógica analítica para la resolución ágil de fallas de software.</p>
+                    <div class="tags-tecnicos">
+                        <span>Soporte L1.5</span> <span>VPN/Citrix</span> <span>Troubleshooting</span> <span>Diagnóstico IT</span>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <span class="tipo-rol">Rol Profesional</span>
+                        <a href="#" class="link-detalles">DETALLES &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 5: Teleperformance & Concentrix (Unidos) -->
+                <article class="tarjeta-exp" data-categoria="soporte">
+                    <div class="tarjeta-header">
+                        <span class="tag-categoria">LIDERAZGO & COMUNICACIÓN BILINGÜE</span>
+                        <span class="anio">2020-2024</span>
+                    </div>
+                    <h3>Teleperformance & Concentrix</h3>
+                    <p class="rol">SUPERVISOR & ASESOR DE SOPORTE BILINGÜE</p>
+                    <p class="descripcion">Liderazgo de equipos técnicos y gestión operativa mediante KPIs bajo principios Agile. Destacada habilidad en negociación y comunicación asertiva intercultural, resolviendo incidencias complejas (iOS/macOS) bajo presión extrema y garantizando la retención y satisfacción del cliente.</p>
+                    <div class="tags-tecnicos">
+                        <span>Soft Skills</span> <span>Bilingüe</span> <span>Liderazgo Agile</span> <span>KPIs</span> <span>iOS/macOS</span>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <span class="tipo-rol">Rol Profesional</span>
+                        <a href="#" class="link-detalles">DETALLES &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: ESTUDIOS ================= -->
+        <section id="estudios" class="seccion-estudios">
+            
+            <div class="cabecera-estudios">
+                <h4 class="etiqueta-dorada">FORMACIÓN ACADÉMICA</h4>
+                <h2>Estudios & Certificaciones</h2>
+                <p>Bases sólidas en ciencias computacionales, estructuración de bases de datos y conectividad de redes empresariales.</p>
+            </div>
+
+            <!-- Línea de tiempo de estudios principales -->
+            <div class="linea-tiempo">
+                
+                <!-- Estudio 1 -->
+                <div class="item-timeline">
+                    <div class="punto-dorado"></div>
+                    <div class="tarjeta-estudio">
+                        <div class="header-estudio">
+                            <h3>Ingeniería en Desarrollo de Software</h3>
+                            <span class="tipo-estudio">En Curso / Formación Principal</span>
+                        </div>
+                        <p class="institucion">FUNDACIÓN UNIVERSITARIA COMPENSAR</p>
+                        <p class="descripcion">Fundamentos rigurosos en estructuras de datos, algoritmia, ingeniería en prompt, arquitectura de sistemas y aseguramiento de calidad del ciclo de vida del software (SDLC).</p>
+                    </div>
+                </div>
+
+                <!-- Estudio 2 -->
+                <div class="item-timeline">
+                    <div class="punto-dorado"></div>
+                    <div class="tarjeta-estudio">
+                        <div class="header-estudio">
+                            <h3>Técnico en Desarrollo de Software</h3>
+                            <span class="tipo-estudio">Certificación Técnica</span>
+                        </div>
+                        <p class="institucion">SENA</p>
+                        <p class="descripcion">Fundamentos de programación, creación de algoritmos y construcción de software, aplicando buenas prácticas y metodologías ágiles durante el ciclo de vida del desarrollo.</p>
+                    </div>
+                </div>
+
+                <!-- Estudio 3 -->
+                <div class="item-timeline">
+                    <div class="punto-dorado"></div>
+                    <div class="tarjeta-estudio">
+                        <div class="header-estudio">
+                            <h3>Curso Especializado en PHP</h3>
+                            <span class="tipo-estudio">Capacitación Especializada</span>
+                        </div>
+                        <p class="institucion">SENA</p>
+                        <p class="descripcion">Capacitación en desarrollo backend y creación de aplicaciones web dinámicas. Integración con bases de datos, procesamiento de formularios y estructuración de lógica del lado del servidor.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-boton-centro">
+                <button id="abrir-certificaciones" class="btn btn-secundario">VER MÁS CERTIFICACIONES</button>
+            </div>
+
+        </section>
+
+        <!-- ================= MODAL DE CERTIFICACIONES (Oculto por defecto) ================= -->
+        <div id="modal-certificaciones" class="modal-oculto">
+            <div class="contenido-modal">
+                <button class="cerrar-modal" id="cerrar-modal">&times;</button>
+                
+                <h2 class="titulo-modal">Certificaciones Adicionales</h2>
+                <div class="linea-decorativa"></div>
+                
+                <ul class="lista-certificaciones">
+                    <li>
+                        <strong>Programación en Java</strong>
+                        <span>Oracle Academy (2026)</span>
+                    </li>
+                    <li>
+                        <strong>Diseño de Bases de Datos</strong>
+                        <span>Oracle Academy (2025)</span>
+                    </li>
+                    <li>
+                        <strong>Derecho de Autor para la Industria del Software (60h)</strong>
+                        <span>DNDA - Ministerio del Interior (2024)</span>
+                    </li>
+                    <li>
+                        <strong>Básico de Derecho de Autor (60h)</strong>
+                        <span>DNDA - Ministerio del Interior (2024)</span>
+                    </li>
+                    <li>
+                        <strong>Python para Principiantes</strong>
+                        <span>Microsoft Learn</span>
+                    </li>
+                    <li>
+                        <strong>Introducción a C#</strong>
+                        <span>Microsoft Learn</span>
+                    </li>
+                    <li>
+                        <strong>Compilación de aplicaciones web con ASP.NET Core para principiantes</strong>
+                        <span>Microsoft Learn (2026)</span>
+                    </li>
+                    <li>
+                        <strong>Fundamentos de MATLAB</strong>
+                        <span>MathWorks</span>
+                    </li>
+                    <li>
+                        <strong>Curso Especializado en PHP</strong>
+                        <span>SENA (2018)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ================= SECCIÓN: CONTACTO ================= -->
+        <section id="contacto" class="seccion-contacto">
+            <h4 class="etiqueta-dorada text-center">HABLEMOS</h4>
+            <h2 class="titulo-contacto">Creemos soluciones confiables y sofisticadas.</h2>
+            <p class="subtitulo-contacto">Si estás buscando elevar la calidad de tu producto o construir una interfaz con solidez arquitectónica, mi bandeja de entrada está abierta.</p>
+
+            <div class="caja-correo">
+                <span id="texto-correo">monterothomas885@gmail.com</span>
+            </div>
+
+            <div class="botones-redes">
+                <a href="#" class="btn-red">LINKEDIN &rarr;</a>
+                <a href="#" class="btn-red">GITHUB &rarr;</a>
+                <button id="btn-copiar-correo" class="btn-red">ENVIAR CORREO</button>
+            </div>
+            
+            <!-- Mensaje flotante de confirmación -->
+            <div id="mensaje-copiado" class="toast-copiado">¡Correo copiado al portapapeles!</div>
+        </section>
+    </div> <!-- FIN CONTENEDOR PRINCIPAL -->
+
+    <!-- ================= FOOTER / BARRA INFERIOR ================= -->
+    <footer class="footer-bar">
+        <div class="footer-izq">&copy; 2026 Thomas Buitrago.</div>
+        <div class="footer-der">QA Manual &bull; Desarrollo Full-Stack</div>
+    </footer>
+
+    </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

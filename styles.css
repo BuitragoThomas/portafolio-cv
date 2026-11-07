@@ -1,0 +1,867 @@
+/* ==========================================
+   BARRA DE NAVEGACIÓN (HEADER FIJO)
+   ========================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(245, 242, 235, 0.95); /* El mismo beige pero con un ligero blur */
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid rgba(138, 129, 117, 0.2);
+}
+
+/* Izquierda: Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.circulo-dorado {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--color-dorado);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente-serif);
+    color: var(--color-dorado);
+    font-size: 1.1rem;
+}
+
+.nombre-nav {
+    font-family: var(--fuente-serif);
+    font-size: 1.6rem;
+    color: var(--color-texto-oscuro);
+    text-decoration: none;
+}
+
+/* Centro: Píldora de estado */
+.pill-disponible {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 18px;
+    border: 1px solid rgba(138, 129, 117, 0.3);
+    border-radius: 30px;
+    font-size: 0.8rem;
+    color: var(--color-texto-claro);
+}
+
+.punto-verde {
+    width: 8px;
+    height: 8px;
+    background-color: #5d8765; /* Verde musgo elegante */
+    border-radius: 50%;
+}
+
+/* Derecha: Enlaces */
+.nav-enlaces {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: var(--fuente-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--color-texto-oscuro);
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.activo {
+    border-bottom-color: var(--color-dorado);
+}
+
+/* Responsivo para el menú en celulares */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .nav-estado {
+        order: 3; /* Mueve la píldora al final en móvil */
+    }
+    .nav-enlaces {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+/* ==========================================
+   VARIABLES OLD MONEY (Basado en la referencia)
+   ========================================== */
+:root {
+    --color-fondo: #f5f2eb;      /* Beige claro general */
+    --color-texto-oscuro: #332b23; /* Café oscuro casi negro */
+    --color-texto-claro: #8a8175;  /* Gris/Café claro para párrafos */
+    --color-dorado: #c5a467;     /* Mostaza/Dorado elegante */
+    --color-dorado-hover: #b08d55;
+    
+    --fuente-serif: 'Playfair Display', serif;
+    --fuente-sans: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-sans);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+}
+
+/* Contenedor centralizado */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+/* ==========================================
+   SECCIÓN HERO / SOBRE MÍ
+   ========================================== */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* La columna de texto es ligeramente más ancha */
+    gap: 60px;
+    align-items: center;
+}
+
+/* ETIQUETA SUPERIOR */
+.etiqueta-seccion {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--color-dorado);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.etiqueta-seccion .linea {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: var(--color-dorado);
+    margin-right: 15px;
+}
+
+/* TÍTULOS */
+.hero-texto h1 {
+    font-family: var(--fuente-serif);
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-texto-oscuro);
+}
+
+.hero-texto .subtitulo {
+    font-family: var(--fuente-serif);
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-dorado);
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+/* PÁRRAFO PRINCIPAL */
+.descripcion-perfil {
+    font-size: 0.95rem;
+    color: var(--color-texto-claro);
+    margin-bottom: 40px;
+    max-width: 90%;
+}
+
+/* CAJA DE DESTACADOS (Borde Delgado) */
+.caja-destacados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgba(138, 129, 117, 0.2); /* Borde sutil */
+    margin-bottom: 40px;
+}
+
+.destacado {
+    padding: 20px;
+}
+
+.destacado-derecha {
+    border-left: 1px solid rgba(138, 129, 117, 0.2);
+}
+
+.destacado h3 {
+    font-family: var(--fuente-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 10px;
+}
+
+.destacado p {
+    font-size: 0.8rem;
+    color: var(--color-texto-claro);
+    line-height: 1.5;
+}
+
+/* BOTONES */
+.botones-accion {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    font-family: var(--fuente-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-primario {
+    background-color: var(--color-dorado);
+    color: #fff;
+    border: 1px solid var(--color-dorado);
+}
+
+.btn-primario:hover {
+    background-color: var(--color-dorado-hover);
+    border-color: var(--color-dorado-hover);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--color-texto-oscuro);
+    border: 1px solid rgba(138, 129, 117, 0.3);
+}
+
+.btn-secundario:hover {
+    background-color: rgba(138, 129, 117, 0.05);
+}
+
+/* ==========================================
+   ILUSTRACIÓN DEL PORTAFOLIO (Columna Derecha)
+   ========================================== */
+.hero-imagen {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.portafolio-mockup {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra elegante */
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.portafolio-marco-exterior {
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 10px;
+    height: 100%;
+}
+
+.portafolio-marco-interior {
+    background-color: #dfd8c8; /* Beige un poco más oscuro para el interior */
+    height: 480px; /* Altura fija para mantener proporción */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portafolio-contenido {
+    text-align: center;
+}
+
+.portafolio-contenido .monograma {
+    font-family: var(--fuente-serif);
+    font-size: 5rem;
+    color: var(--color-dorado);
+    line-height: 1;
+    font-weight: 400;
+}
+
+.portafolio-contenido .craftsman {
+    font-family: var(--fuente-serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--color-texto-oscuro);
+    margin-top: 10px;
+}
+
+.portafolio-contenido .rol-detalle {
+    font-family: var(--fuente-sans);
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    color: var(--color-texto-claro);
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVO BÁSICO */
+@media (max-width: 900px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+    .hero-imagen {
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .hero-texto h1 { font-size: 3.5rem; }
+    .hero-texto .subtitulo { font-size: 2.5rem; }
+}
+/* ==========================================
+   SECCIÓN EXPERIENCIA Y PROYECTOS
+   ========================================== */
+.seccion-experiencia {
+    margin-top: 100px;
+    padding-top: 60px;
+    border-top: 1px solid rgba(138, 129, 117, 0.2);
+}
+
+.cabecera-experiencia {
+    margin-bottom: 40px;
+}
+
+.etiqueta-dorada {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--color-dorado);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.cabecera-experiencia h2 {
+    font-family: var(--fuente-serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 15px;
+}
+
+.cabecera-experiencia p {
+    color: var(--color-texto-claro);
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+/* BARRA DE FILTROS */
+.barra-filtros {
+    display: flex;
+    gap: 0;
+    border: 1px solid rgba(138, 129, 117, 0.2);
+    background-color: transparent;
+    margin-bottom: 40px;
+    width: fit-content;
+}
+
+.btn-filtro {
+    background: none;
+    border: none;
+    border-right: 1px solid rgba(138, 129, 117, 0.2);
+    padding: 12px 20px;
+    font-family: var(--fuente-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-texto-oscuro);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-filtro:last-child {
+    border-right: none;
+}
+
+.btn-filtro .contador {
+    background-color: rgba(138, 129, 117, 0.15);
+    color: var(--color-texto-oscuro);
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.65rem;
+}
+
+.btn-filtro.activo {
+    background-color: var(--color-texto-oscuro);
+    color: #fff;
+}
+
+.btn-filtro.activo .contador {
+    background-color: var(--color-dorado);
+    color: #fff;
+}
+
+/* CUADRÍCULA DE TARJETAS */
+.grid-experiencia {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-exp {
+    background-color: #fff; /* Fondo blanco puro */
+    border: 1px solid rgba(138, 129, 117, 0.2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-exp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.tarjeta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.tag-categoria {
+    background-color: var(--color-fondo);
+    color: var(--color-dorado);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    text-transform: uppercase;
+}
+
+.anio {
+    font-family: var(--fuente-serif);
+    font-size: 0.9rem;
+    color: var(--color-texto-claro);
+    font-style: italic;
+}
+
+.tarjeta-exp h3 {
+    font-family: var(--fuente-serif);
+    font-size: 1.8rem;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 5px;
+}
+
+.tarjeta-exp .rol {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-texto-claro);
+    margin-bottom: 20px;
+}
+
+.tarjeta-exp .descripcion {
+    font-size: 0.9rem;
+    color: var(--color-texto-claro);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Empuja el footer hacia abajo si el texto es corto */
+}
+
+.tags-tecnicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.tags-tecnicos span {
+    background-color: var(--color-fondo);
+    color: var(--color-texto-oscuro);
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    border: 1px solid rgba(138, 129, 117, 0.15);
+}
+
+.tarjeta-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(138, 129, 117, 0.2);
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.tarjeta-footer .tipo-rol {
+    font-size: 0.75rem;
+    color: var(--color-texto-claro);
+}
+
+.tarjeta-footer .link-detalles {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-texto-oscuro);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.tarjeta-footer .link-detalles:hover {
+    color: var(--color-dorado);
+}
+
+/* ==========================================
+   SECCIÓN ESTUDIOS (Línea de tiempo)
+   ========================================== */
+.seccion-estudios {
+    margin-top: 100px;
+    padding-top: 60px;
+    border-top: 1px solid rgba(138, 129, 117, 0.2);
+}
+
+.cabecera-estudios {
+    margin-bottom: 50px;
+}
+
+.cabecera-estudios h2 {
+    font-family: var(--fuente-serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 15px;
+}
+
+.cabecera-estudios p {
+    color: var(--color-texto-claro);
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+/* LÍNEA DE TIEMPO */
+.linea-tiempo {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 40px;
+}
+
+/* La línea vertical fina */
+.linea-tiempo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8px; /* Ajustado para centrar con los círculos */
+    width: 1px;
+    background-color: var(--color-dorado);
+    opacity: 0.4;
+}
+
+.item-timeline {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* El círculo dorado vacío */
+.punto-dorado {
+    position: absolute;
+    left: -29px; /* Posicionado sobre la línea */
+    top: 25px; /* Alineado con el título de la tarjeta */
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--color-dorado);
+    border-radius: 50%;
+    background-color: var(--color-fondo);
+    z-index: 2;
+}
+
+/* Tarjetas de estudio */
+.tarjeta-estudio {
+    background-color: #fff;
+    border: 1px solid rgba(138, 129, 117, 0.2);
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-left: 20px;
+}
+
+.header-estudio {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.header-estudio h3 {
+    font-family: var(--fuente-serif);
+    font-size: 1.5rem;
+    color: var(--color-texto-oscuro);
+}
+
+.tipo-estudio {
+    font-family: var(--fuente-serif);
+    font-style: italic;
+    color: var(--color-dorado);
+    font-size: 0.9rem;
+}
+
+.tarjeta-estudio .institucion {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-texto-claro);
+    margin-bottom: 15px;
+}
+
+.tarjeta-estudio .descripcion {
+    font-size: 0.9rem;
+    color: var(--color-texto-claro);
+    line-height: 1.6;
+}
+
+.contenedor-boton-centro {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* ==========================================
+   MODAL DE CERTIFICACIONES
+   ========================================== */
+.modal-oculto {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 43, 35, 0.7); /* Overlay oscuro */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.contenido-modal {
+    background-color: var(--color-fondo);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    padding: 40px;
+    position: relative;
+    border: 1px solid var(--color-dorado);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    overflow-y: auto;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-texto-oscuro);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.cerrar-modal:hover {
+    color: var(--color-dorado);
+}
+
+.titulo-modal {
+    font-family: var(--fuente-serif);
+    font-size: 2rem;
+    color: var(--color-texto-oscuro);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.linea-decorativa {
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-dorado);
+    margin: 0 auto 30px;
+}
+
+.lista-certificaciones {
+    list-style: none;
+}
+
+.lista-certificaciones li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(138, 129, 117, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-certificaciones li:last-child {
+    border-bottom: none;
+}
+
+.lista-certificaciones strong {
+    font-family: var(--fuente-serif);
+    font-size: 1.1rem;
+    color: var(--color-texto-oscuro);
+    font-weight: 600;
+}
+
+.lista-certificaciones span {
+    font-size: 0.8rem;
+    color: var(--color-texto-claro);
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsivo para la línea de tiempo */
+@media (max-width: 768px) {
+    .header-estudio {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* ==========================================
+   SECCIÓN CONTACTO & FOOTER
+   ========================================== */
+.seccion-contacto {
+    padding: 100px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.text-center {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.titulo-contacto {
+    font-family: var(--fuente-serif);
+    font-size: 2.8rem;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.subtitulo-contacto {
+    color: var(--color-texto-claro);
+    font-size: 0.95rem;
+    max-width: 650px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* Caja dorada del correo */
+.caja-correo {
+    border: 2px solid var(--color-dorado);
+    padding: 15px 40px;
+    margin-bottom: 30px; /* Reducido de 50px a 30px */
+    display: inline-block;
+}
+
+.caja-correo span {
+    font-family: var(--fuente-serif);
+    font-size: 2.2rem;
+    color: var(--color-texto-oscuro);
+}
+
+/* Botones finales */
+.botones-redes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0; /* Quitamos el margen inferior para pegarlo al footer */
+}
+
+.btn-red {
+    background: transparent;
+    border: 1px solid rgba(138, 129, 117, 0.3);
+    padding: 15px 30px;
+    font-family: var(--fuente-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-red:hover {
+    border-color: var(--color-dorado);
+    color: var(--color-texto-oscuro);
+    background-color: rgba(197, 164, 103, 0.05); /* Dorado muy tenue de fondo */
+}
+
+/* Mensaje flotante de copiado (Toast) */
+.toast-copiado {
+    background-color: var(--color-dorado);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    visibility: hidden;
+    letter-spacing: 1px;
+}
+
+.toast-copiado.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Barra oscura del final */
+.footer-bar {
+    background-color: #ebe7de; /* Beige ligeramente más oscuro */
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--color-texto-claro);
+    border-top: 1px solid rgba(138, 129, 117, 0.1);
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .titulo-contacto { font-size: 2rem; }
+    .caja-correo span { font-size: 1.5rem; }
+    .botones-redes { flex-direction: column; width: 100%; align-items: center;}
+    .btn-red { width: 100%; max-width: 300px; text-align: center; }
+    .footer-bar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+/* ==========================================
+   SECCIÓN CONTACTO & FOOTER
+   ========================================== */
+.seccion-contacto {
+    margin-top: 60px; /* Separación del contenido anterior */
+    padding-top: 80px;
+    padding-bottom: 40px; /* Reducimos este padding para acercarlo al footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid rgba(138, 129, 117, 0.2); /* La línea divisoria sutil */
+}
