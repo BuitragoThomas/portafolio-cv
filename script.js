@@ -56,6 +56,45 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    // --- LÓGICA DE MODALES DE EXPERIENCIA ---
+    const botonesAbrirExp = document.querySelectorAll('.abrir-modal-exp');
+    const botonesCerrarExp = document.querySelectorAll('.btn-cerrar-exp');
+    const modalesExp = document.querySelectorAll('.modal-exp-overlay');
+
+    // Abrir el modal correspondiente
+    botonesAbrirExp.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+            e.preventDefault(); // Evita que la página salte si es un enlace
+            const targetId = boton.getAttribute('data-target');
+            const modalTarget = document.getElementById(targetId);
+            if(modalTarget) {
+                modalTarget.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Cerrar modal con botones (X, CERRAR, ENTENDIDO)
+    botonesCerrarExp.forEach(boton => {
+        boton.addEventListener('click', () => {
+            // Encuentra el modal padre más cercano y lo cierra
+            const modal = boton.closest('.modal-exp-overlay');
+            if(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.addEventListener('click', (event) => {
+        modalesExp.forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
 
     // --- LÓGICA DEL MODAL DE CERTIFICACIONES ---
     const btnAbrirModal = document.getElementById('abrir-certificaciones');

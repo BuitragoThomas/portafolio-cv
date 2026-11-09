@@ -521,6 +521,208 @@ body {
 .tarjeta-footer .link-detalles:hover {
     color: var(--color-dorado);
 }
+/* ==========================================
+   MODALES DE EXPERIENCIA (Diseño Tarjetas)
+   ========================================== */
+.modal-exp-overlay {
+    background-color: rgba(51, 43, 35, 0.75);
+}
+
+.modal-exp-contenido {
+    background-color: var(--color-fondo); /* Fondo beige crudo del PDF */
+    width: 95%;
+    max-width: 650px;
+    max-height: 90vh;
+    border: 1px solid var(--color-dorado);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-exp-header {
+    padding: 35px 40px 20px;
+    border-bottom: 1px solid rgba(138, 129, 117, 0.15);
+}
+
+.etiqueta-dorada-modal {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: var(--color-dorado);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cerrar-modal-x {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--color-texto-oscuro);
+    cursor: pointer;
+    line-height: 1;
+    font-weight: 300;
+}
+
+.titulo-cargo {
+    font-family: var(--fuente-serif);
+    font-size: 2.6rem;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.subtitulo-cargo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.pill-dorada {
+    background-color: rgba(197, 164, 103, 0.15);
+    color: var(--color-dorado);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.fecha-modal {
+    font-family: var(--fuente-serif);
+    font-style: italic;
+    color: var(--color-texto-claro);
+    font-size: 0.95rem;
+}
+
+.modal-exp-body {
+    padding: 30px 40px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.seccion-titulo-linea {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.seccion-titulo-linea h4 {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: var(--color-dorado);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.linea-suave {
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(197, 164, 103, 0.3);
+}
+
+.lista-responsabilidades {
+    list-style: none;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cajas blancas para cada ítem */
+.lista-responsabilidades li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.bullet-circulo {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #eee9dd; /* Beige suave */
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.lista-responsabilidades p {
+    font-size: 0.85rem;
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+}
+
+.lista-responsabilidades strong {
+    font-weight: 700;
+}
+
+.tags-ecosistema {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tags-ecosistema span {
+    background-color: transparent;
+    border: 1px solid rgba(138, 129, 117, 0.2);
+    color: var(--color-texto-oscuro);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.modal-exp-footer {
+    padding: 20px 40px;
+    background-color: #fcfbfa; /* Un blanco roto muy suave */
+    border-top: 1px solid rgba(138, 129, 117, 0.15);
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn-footer-transparente {
+    background: transparent;
+    border: 1px solid rgba(138, 129, 117, 0.3);
+    color: var(--color-texto-oscuro);
+    padding: 10px 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-footer-transparente:hover {
+    background-color: rgba(138, 129, 117, 0.05);
+}
+
+.btn-footer-dorado {
+    background: var(--color-dorado);
+    border: 1px solid var(--color-dorado);
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-footer-dorado:hover {
+    background: #b08d55;
+}
 
 /* ==========================================
    SECCIÓN ESTUDIOS (Línea de tiempo)

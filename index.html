@@ -134,7 +134,7 @@
                     </div>
                     <div class="tarjeta-footer">
                         <span class="tipo-rol">Rol Profesional</span>
-                        <a href="#" class="link-detalles">DETALLES &rarr;</a>
+                        <button class="link-detalles abrir-modal-exp" data-target="modal-adlab">DETALLES &rarr;</button>
                     </div>
                 </article>
 
@@ -152,7 +152,7 @@
                     </div>
                     <div class="tarjeta-footer">
                         <span class="tipo-rol">Proyecto Personal</span>
-                        <a href="#" class="link-detalles">VER CÓDIGO &rarr;</a>
+                        <a href="#" class="link-detalles">VER PROYECTO &rarr;</a>
                     </div>
                 </article>
 
@@ -170,7 +170,7 @@
                     </div>
                     <div class="tarjeta-footer">
                         <span class="tipo-rol">Solución Técnica</span>
-                        <a href="#" class="link-detalles">VER CÓDIGO &rarr;</a>
+                        <a href="#" class="link-detalles">VER PROYECTO &rarr;</a>
                     </div>
                 </article>
 
@@ -188,7 +188,7 @@
                     </div>
                     <div class="tarjeta-footer">
                         <span class="tipo-rol">Rol Profesional</span>
-                        <a href="#" class="link-detalles">DETALLES &rarr;</a>
+                        <button class="link-detalles abrir-modal-exp" data-target="modal-ibm">DETALLES &rarr;</button>
                     </div>
                 </article>
 
@@ -206,12 +206,168 @@
                     </div>
                     <div class="tarjeta-footer">
                         <span class="tipo-rol">Rol Profesional</span>
-                        <a href="#" class="link-detalles">DETALLES &rarr;</a>
+                        <button class="link-detalles abrir-modal-exp" data-target="modal-tp">DETALLES &rarr;</button>
                     </div>
                 </article>
 
             </div>
         </section>
+
+        <!-- ================= MODALES DE EXPERIENCIA ================= -->
+
+        <!-- MODAL 1: QA ADLAB -->
+        <div id="modal-adlab" class="modal-oculto modal-exp-overlay">
+            <div class="modal-exp-contenido">
+                
+                <div class="modal-exp-header">
+                    <span class="etiqueta-dorada-modal">&mdash; TRAYECTORIA & EXPERIENCIA</span>
+                    <button class="cerrar-modal-x btn-cerrar-exp">&times;</button>
+                    <h2 class="titulo-cargo">Aprendiz QA</h2>
+                    <div class="subtitulo-cargo">
+                        <span class="pill-dorada">Aseguramiento de Calidad</span>
+                        <span class="fecha-modal">&#9744; Abril 2026 &mdash; Septiembre 2026</span>
+                    </div>
+                </div>
+
+                <div class="modal-exp-body">
+                    <div class="seccion-titulo-linea">
+                        <h4>RESPONSABILIDADES PRINCIPALES</h4>
+                        <div class="linea-suave"></div>
+                    </div>
+                    <ul class="lista-responsabilidades">
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Pruebas funcionales y UX:</strong> Ejecutar casos de prueba manuales para aplicaciones web, validando funcionalidad y alineación rigurosa de diseño en prototipos de Figma.</p>
+                        </li>
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Validación de servicios:</strong> Realizar pruebas de API backend y verificar respuestas, contratos y códigos de estado con Postman.</p>
+                        </li>
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Monitoreo y observabilidad:</strong> Monitorear registros de sistemas e informes de errores en AWS CloudWatch para agilizar el diagnóstico oportuno de fallas.</p>
+                        </li>
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Integridad de datos:</strong> Consultar y verificar registros en bases de datos NoSQL mediante DynamoDB para asegurar consistencia e integridad de datos.</p>
+                        </li>
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Innovación y optimización:</strong> Utilizar herramientas de IA para optimizar la generación de escenarios de prueba exhaustivos y la estandarización de documentación técnica.</p>
+                        </li>
+                    </ul>
+
+                    <div class="seccion-titulo-linea">
+                        <h4>HERRAMIENTAS & ECOSISTEMA</h4>
+                        <div class="linea-suave"></div>
+                    </div>
+                    <div class="tags-ecosistema">
+                        <span>QA MANUAL</span> <span>FIGMA UI AUDIT</span> <span>POSTMAN & REST</span> <span>AWS CLOUDWATCH</span> <span>AMAZON DYNAMODB</span> <span>AI PROMPT ENGINEERING</span>
+                    </div>
+                </div>
+
+                <div class="modal-exp-footer">
+                    <button class="btn-footer-transparente btn-cerrar-exp">CERRAR</button>
+                    <button class="btn-footer-dorado btn-cerrar-exp">ENTENDIDO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL 2: IBM / ALGAR TECH -->
+        <div id="modal-ibm" class="modal-oculto modal-exp-overlay">
+            <div class="modal-exp-contenido">
+                <div class="modal-exp-header">
+                    <span class="etiqueta-dorada-modal">&mdash; TRAYECTORIA & EXPERIENCIA</span>
+                    <button class="cerrar-modal-x btn-cerrar-exp">&times;</button>
+                    <h2 class="titulo-cargo">Tecnólogo en Mesa de Ayuda (L1.5)</h2>
+                    <div class="subtitulo-cargo">
+                        <span class="pill-dorada">Soporte Técnico Empresarial</span>
+                        <span class="fecha-modal">&#9744; Julio 2024 &mdash; Diciembre 2025</span>
+                    </div>
+                </div>
+                <div class="modal-exp-body">
+                    <div class="seccion-titulo-linea">
+                        <h4>RESPONSABILIDADES PRINCIPALES</h4>
+                        <div class="linea-suave"></div>
+                    </div>
+                    <ul class="lista-responsabilidades">
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Soporte especializado:</strong> Proporcionar soporte técnico remoto (L1.5) en entornos empresariales complejos (VPN, Citrix).</p>
+                        </li>
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Reportes diagnósticos:</strong> Contribuir a la elaboración de reportes técnicos detallados para clientes, enfocando el análisis de fallas y el diagnóstico de raíz.</p>
+                        </li>
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Lógica estructurada:</strong> Aplicar lógica analítica y estructurada para la resolución eficiente y documentada de problemas de software.</p>
+                        </li>
+                    </ul>
+                    <div class="seccion-titulo-linea">
+                        <h4>HERRAMIENTAS & ECOSISTEMA</h4>
+                        <div class="linea-suave"></div>
+                    </div>
+                    <div class="tags-ecosistema">
+                        <span>SOPORTE L1.5</span> <span>VPN / CITRIX</span> <span>TROUBLESHOOTING</span> <span>DIAGNÓSTICO TÉCNICO</span> <span>LÓGICA ANALÍTICA</span>
+                    </div>
+                </div>
+                <div class="modal-exp-footer">
+                    <button class="btn-footer-transparente btn-cerrar-exp">CERRAR</button>
+                    <button class="btn-footer-dorado btn-cerrar-exp">ENTENDIDO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL 3: CALL CENTER BILINGÜE (TP & CONCENTRIX) -->
+        <div id="modal-tp" class="modal-oculto modal-exp-overlay">
+            <div class="modal-exp-contenido">
+                <div class="modal-exp-header">
+                    <span class="etiqueta-dorada-modal">&mdash; TRAYECTORIA & EXPERIENCIA</span>
+                    <button class="cerrar-modal-x btn-cerrar-exp">&times;</button>
+                    <h2 class="titulo-cargo">Supervisor & Asesor Bilingüe</h2>
+                    <div class="subtitulo-cargo">
+                        <span class="pill-dorada">Liderazgo & Retención</span>
+                        <span class="fecha-modal">&#9744; Agosto 2020 &mdash; Julio 2024</span>
+                    </div>
+                </div>
+                <div class="modal-exp-body">
+                    <div class="seccion-titulo-linea">
+                        <h4>RESPONSABILIDADES PRINCIPALES</h4>
+                        <div class="linea-suave"></div>
+                    </div>
+                    <ul class="lista-responsabilidades">
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Liderazgo de equipos:</strong> Liderar y optimizar el rendimiento de equipos de soporte técnico bilingüe (iOS/macOS) mediante la gestión de KPIs operativos.</p>
+                        </li>
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Metodologías ágiles:</strong> Aplicar fundamentos de metodología Agile en el flujo de trabajo para maximizar la calidad y eficiencia del servicio.</p>
+                        </li>
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Negociación y retención:</strong> Gestionar procesos de retención bilingüe, combinando negociaciones complejas con la solución de fallas técnicas bajo alta presión.</p>
+                        </li>
+                        <li>
+                            <div class="bullet-circulo"></div>
+                            <p><strong>Comunicación técnica asertiva:</strong> Desarrollar comunicación técnica simplificada, mejorando significativamente la experiencia del usuario y la documentación de procesos.</p>
+                        </li>
+                    </ul>
+                    <div class="seccion-titulo-linea">
+                        <h4>HERRAMIENTAS & HABILIDADES</h4>
+                        <div class="linea-suave"></div>
+                    </div>
+                    <div class="tags-ecosistema">
+                        <span>BILINGÜE (INGLÉS)</span> <span>LIDERAZGO AGILE</span> <span>KPIs</span> <span>SOFT SKILLS</span> <span>RETENCIÓN B2C</span> <span>iOS / macOS</span>
+                    </div>
+                </div>
+                <div class="modal-exp-footer">
+                    <button class="btn-footer-transparente btn-cerrar-exp">CERRAR</button>
+                    <button class="btn-footer-dorado btn-cerrar-exp">ENTENDIDO</button>
+                </div>
+            </div>
+        </div>
 
         <!-- ================= SECCIÓN: ESTUDIOS ================= -->
         <section id="estudios" class="seccion-estudios">
@@ -332,8 +488,7 @@
             </div>
 
             <div class="botones-redes">
-                <a href="#" class="btn-red">LINKEDIN &rarr;</a>
-                <a href="#" class="btn-red">GITHUB &rarr;</a>
+                <a href="https://github.com/BuitragoThomas" target="_blank" class="btn-red">GITHUB &rarr;</a>
                 <button id="btn-copiar-correo" class="btn-red">ENVIAR CORREO</button>
             </div>
             
