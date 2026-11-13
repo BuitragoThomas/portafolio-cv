@@ -21,6 +21,7 @@
     gap: 15px;
 }
 
+/* Ajuste para el logo dentro del círculo del menú */
 .circulo-dorado {
     width: 45px;
     height: 45px;
@@ -29,9 +30,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: var(--fuente-serif);
-    color: var(--color-dorado);
-    font-size: 1.1rem;
+    overflow: hidden; /* Corta lo que se salga de la circunferencia */
+    background-color: var(--color-blanco); /* Fondo blanco por si el PNG tiene transparencia */
+}
+
+.logo-circulo-img {
+    width: 90%; /* Lo expandimos un poco más del 100% para que llene los bordes */
+    height: 90%;
+    object-fit: cover; /* Hace que cubra todo el círculo sin dejar espacios vacíos */
+}
+
+/* Ajuste para el logo en la tarjeta de la foto (Hero) */
+.logo-hero-overlay {
+    display: block;
+    width: 80%; /* Se adapta al ancho de la tarjeta */
+    max-width: 220px; /* Tamaño máximo para que se vea fino y equilibrado */
+    height: auto;
+    margin: 0 auto 10px; /* Centra el logo y le da aire al texto de abajo */
+    object-fit: contain;
+}
+
+/* Espaciado del rol inferior en el overlay */
+.rol-detalle-peque {
+    font-family: var(--fuente-sans);
+    font-size: 0.58rem;
+    letter-spacing: 1.5px;
+    color: var(--color-texto-claro);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 10px; /* Separa el texto del borde inferior del logo */
+    border-top: 1px solid rgba(138, 129, 117, 0.15); /* Línea divisoria muy sutil */
+    padding-top: 10px;
 }
 
 .nombre-nav {
@@ -107,9 +136,10 @@
     --color-texto-claro: #8a8175;  /* Gris/Café claro para párrafos */
     --color-dorado: #c5a467;     /* Mostaza/Dorado elegante */
     --color-dorado-hover: #b08d55;
-    
-    --fuente-serif: 'Playfair Display', serif;
+
+    --fuente-serif: 'Playfair Display', serif; /* La que ya tenías para los títulos normales */
     --fuente-sans: 'Lato', sans-serif;
+    --fuente-especial: 'Cormorant Garamond', serif; /* La nueva exclusiva para la Q elegante */
 }
 
 * {
@@ -172,13 +202,18 @@ body {
 }
 
 .hero-texto .subtitulo {
-    font-family: var(--fuente-serif);
+    font-family: var(--fuente-serif); /* Volvemos a la original (Playfair) para el texto general */
     font-size: 3rem;
     font-weight: 400;
     font-style: italic;
     color: var(--color-dorado);
     margin-bottom: 30px;
     line-height: 1;
+}
+
+/* Esta clase aplicará la letra elegante SOLO al pedacito de "QA" */
+.fuente-qa {
+    font-family: var(--fuente-especial); /* La fuente Cormorant Garamond */
 }
 
 /* PÁRRAFO PRINCIPAL */
@@ -258,7 +293,7 @@ body {
 }
 
 /* ==========================================
-   ILUSTRACIÓN DEL PORTAFOLIO (Columna Derecha)
+   ILUSTRACIÓN DEL PORTAFOLIO (Retrato con Foto)
    ========================================== */
 .hero-imagen {
     display: flex;
@@ -269,65 +304,97 @@ body {
     width: 100%;
     max-width: 400px;
     background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra elegante */
-    border: 1px solid rgba(0,0,0,0.05);
+    padding: 16px;
+    box-shadow: 0 15px 40px rgba(44, 36, 27, 0.12); /* Sombra de cuadro tridimensional */
+    border: 1px solid rgba(138, 129, 117, 0.15);
+    transition: transform 0.5s ease;
+}
+
+.portafolio-mockup:hover {
+    transform: translateY(-5px) rotate(0.5deg); /* Efecto interactivo sutil */
 }
 
 .portafolio-marco-exterior {
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(138, 129, 117, 0.2);
     padding: 10px;
     height: 100%;
 }
 
 .portafolio-marco-interior {
-    background-color: #dfd8c8; /* Beige un poco más oscuro para el interior */
-    height: 480px; /* Altura fija para mantener proporción */
+    position: relative;
+    background-color: #dfd8c8;
+    height: 520px; /* Un poco más alto para dar aire al retrato */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
-.portafolio-contenido {
+/* Contenedor de la foto */
+.foto-retrato-contenedor {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.foto-retrato {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%; /* Centra tu rostro */
+    /* Filtro vintage cálido para que se fusione con el "Old Money" del portafolio */
+    filter: sepia(18%) contrast(102%) brightness(96%) saturate(95%);
+    transition: filter 0.5s ease;
+}
+
+.portafolio-mockup:hover .foto-retrato {
+    filter: sepia(5%) contrast(105%) brightness(98%) saturate(100%); /* Se aclara ligeramente al pasar el mouse */
+}
+
+/* Tarjeta de Autor / Firma superpuesta (Placard) */
+.portafolio-contenido-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(245, 242, 235, 0.96); /* Fondo beige casi opaco */
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--color-dorado);
+    padding: 18px 10px;
     text-align: center;
+    box-shadow: 0 8px 25px rgba(44, 36, 27, 0.15);
 }
 
-.portafolio-contenido .monograma {
+.monograma-peque {
     font-family: var(--fuente-serif);
-    font-size: 5rem;
+    font-size: 2.8rem;
     color: var(--color-dorado);
-    line-height: 1;
+    line-height: 0.8;
+    margin-bottom: 5px;
     font-weight: 400;
 }
 
-.portafolio-contenido .craftsman {
+.craftsman-peque {
     font-family: var(--fuente-serif);
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--color-texto-oscuro);
-    margin-top: 10px;
+    margin-bottom: 4px;
 }
 
-.portafolio-contenido .rol-detalle {
+.rol-detalle-peque {
     font-family: var(--fuente-sans);
-    font-size: 0.6rem;
-    letter-spacing: 2px;
+    font-size: 0.58rem;
+    letter-spacing: 1.5px;
     color: var(--color-texto-claro);
-    margin-top: 10px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
-/* RESPONSIVO BÁSICO */
 @media (max-width: 900px) {
-    .hero-section {
-        grid-template-columns: 1fr;
+    .portafolio-marco-interior {
+        height: 460px; /* Un poco más pequeño en pantallas móviles */
     }
-    .hero-imagen {
-        justify-content: center;
-        margin-top: 40px;
-    }
-    .hero-texto h1 { font-size: 3.5rem; }
-    .hero-texto .subtitulo { font-size: 2.5rem; }
 }
 /* ==========================================
    SECCIÓN EXPERIENCIA Y PROYECTOS
@@ -511,16 +578,23 @@ body {
 }
 
 .tarjeta-footer .link-detalles {
+    background: transparent; /* Quita el fondo gris por defecto del botón */
+    border: none;            /* Quita el borde por defecto */
+    padding: 0;              /* Quita el espacio interno */
+    font-family: var(--fuente-sans);
     font-size: 0.75rem;
     font-weight: 700;
-    color: var(--color-texto-oscuro);
+    color: var(--color-dorado); /* El texto dorado de la imagen */
     text-decoration: none;
     letter-spacing: 1px;
+    cursor: pointer;         /* Pone la 'manito' al pasar el mouse */
+    transition: color 0.3s ease;
 }
 
 .tarjeta-footer .link-detalles:hover {
-    color: var(--color-dorado);
+    color: var(--color-texto-oscuro); /* Cambia a café oscuro al pasar el mouse */
 }
+
 /* ==========================================
    MODALES DE EXPERIENCIA (Diseño Tarjetas)
    ========================================== */

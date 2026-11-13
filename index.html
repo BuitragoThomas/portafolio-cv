@@ -6,6 +6,7 @@
     <title>Thomas Buitrago | Desarrollador & QA</title>
     
     <!-- Fuentes: Playfair Display (Serif) y Lato (Sans-serif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -18,7 +19,9 @@
         
         <!-- Izquierda: Logo y Nombre -->
         <div class="nav-logo">
-            <div class="circulo-dorado">TB</div>
+            <div class="circulo-dorado">
+                <img src="T2.png" alt="TB Logo" class="logo-circulo-img">
+            </div>
             <a href="#sobre-mi" class="nombre-nav">Thomas Buitrago</a>
         </div>
         
@@ -52,7 +55,7 @@
                 </div>
                 
                 <h1>Thomas Buitrago</h1>
-                <h2 class="subtitulo">Desarrollador & QA</h2>
+                <h2 class="subtitulo">Desarrollador & <span class="fuente-qa">QA</span></h2>
                 
                 <p class="descripcion-perfil">
                     Estudiante de Ingeniería de Software con experiencia en pruebas manuales de control de calidad (QA), pruebas de backend y soporte técnico. Familiarizado con metodologías ágiles y el uso de herramientas de IA para optimizar la documentación y los procesos de prueba. Orientado al detalle y con gran motivación para contribuir al ciclo de vida del desarrollo de software.
@@ -75,16 +78,24 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha: Ilustración del Portafolio Físico -->
+           <!-- Columna Derecha: Ilustración del Portafolio Físico con tu Foto -->
             <div class="hero-imagen">
                 <div class="portafolio-mockup">
                     <div class="portafolio-marco-exterior">
                         <div class="portafolio-marco-interior">
-                            <div class="portafolio-contenido">
-                                <h2 class="monograma">TB</h2>
-                                <p class="craftsman">Software Craftsman</p>
-                                <p class="rol-detalle">FULL-STACK & QUALITY ASSURANCE</p>
+                            
+                            <!-- Tu foto con filtro de calidez y marco interior -->
+                            <div class="foto-retrato-contenedor">
+                                <img src="Yo.jfif" alt="Thomas Buitrago" class="foto-retrato">
                             </div>
+
+                            <!-- Tarjeta de autor/firma de gala superpuesta abajo -->
+                            <div class="portafolio-contenido-overlay">
+                                <!-- Se quita el TB y Software Craftsman de texto y se pone el logo completo -->
+                                <img src="T.png" alt="TB Software Craftsman" class="logo-hero-overlay">
+                                <p class="rol-detalle-peque">FULL-STACK & QUALITY ASSURANCE</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
